@@ -1,141 +1,53 @@
-//funcion acceso global y retornan un valor
-function videoGame(){
-    /* datos compuestos */
-//objeto
-    let welcome = prompt("Porfavor ingrese su nombre");
-    alert(`bienvenido ${welcome}`);
-    const caballo = {
-        nombre : "caballo",
-        material : "plata",
-        precio : 18,
-        
-    }
-    const gallitos = {
-        nombre : "gallo",
-        material : "plata",
-        precio : 12,
-    }
-    const evillas = {
-        item1 : caballo,
-        item2 : gallitos,
-    }
-    caballo.tamaño = "grande";//dato por referencia
-    caballo["tamaño-ch"] = "chico";//asignacion programaticamente
-    gallitos["_tamaño-gde"] = "grande";
-    console.log (evillas)
-    console.log (`bienvenido las evillas son de ${caballo.nombre} y de ${gallitos.nombre}`)
-    //letras mayusculas
-    console.log(caballo.material.toUpperCase())
-    //metodo: se requiere un  objeto y puede no retornar un valor
-    //normalmente se accede con un punto
-    function caballos (nombre, material, precio, tamaño) {
-        //contexto es como un let
-        this.nambe = nombre;
-        this.material = material; 
-        this.precio = precio;
-        this.tamaño = tamaño;
-    //metodo
-        //clave        funcion anonima
-        this.peso = function (){
-            console.log ("vezfuncanonima")
-        }
-    }//contexto significa que se almascena en las llaves
-//constructores
-    //"new" es un objeto nuevo que se guarda en constant "caballos"
-    const caballo1 = new caballos  ("frisón", "plata", 14000, "mediano");
-    const caballo2 = new caballos  ("español",  "plata", 14000, "mediano");
-    const caballo3 = new caballos  ("arabe",  "plata", 14000, "mediano");
-    caballo3.peso();
-    const caballo4 = new caballos  ("percherones",  "plata", 14000, "mediano");
-    const caballo5 = new caballos  ("mustang",  "plata", 14000, "mediano");
-    const evillas1 = {
-        evi : caballo1,
-        ev2 : caballo2,
-        ev3 : caballo3,
-        ev4 : caballo4,
-        ev5 : caballo5,
-    }
-    console.log (evillas1)
+function hi(){
+    let nameUser = prompt("favor de ingresar su nombre");
+    let hello = `bienvenido ${nameUser}`
+    console.log(hello)
 }
-videoGame()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-    
-    
-    
-    /* 
-    quince(){
-        let ingNumero = prompt("ingrese un numero");
-    let num = parseInt (ingNumero);//conversion string a número
-    for(let m = 0; m <= num; m++);
-    if (num < 1 || num > 15){
-        console.log ("el número es menor a 1 ó mayor que 15");
-    }else if (num <= 4 && num >=1){
-        console.log ("el número " + num + " es mayor que 0 y menor que 5");
-    } else if ((num >= 5 && num <= 20) && num === 15) {
-        console.log ("¡bingo!, el número es 15");
-    } else if (num >= 5 && num < 16){
-        console.log ("el numero "+ num +" es menor que 16 y mayor que 4");
-    }
-    else{ 
-        alert (m)
+function store (){
+    const stre = [
+        {prod : "evillas"},
+        {prod : "cinturones"}, 
+        {prod : "monturas"}, 
+        {prod :"chaparreras"}, 
+        {prod : "espuelas"}, 
+        {prod : "sombreros"}, 
+        {prod : "votas"}
+    ];
+    for (let i = 0; i < stre.length; i++){
+        console.log (stre [i]);
     }
 }
-//llamador
-quince()
-let nombre = "gggggg";
-let frase = `buevenido ${nombre}`; //ctrl + alt + cierre de llaves
-console.log (frase);
-let saludo = 'pertras"como les va"'
-saludo = `${saludo} "seguro 'muy bien'"`
-console.log (saludo) */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+hi();
+function evillas (){
+    function evillas(name, quality, price, material){
+        this.nombre =name;
+        this.calidad =quality;
+        this.precio = price;
+        this.mate = material;
+    }
+    const evi = new evillas ("caballos", "alta", 10.000, "plata");
+    const ev2 = new evillas ("frisón", "alta", 14.000, "oro");
+    const ev3 = new evillas ("español", "alta", 12.000, "plata");
+    const ev4 = new evillas ("arabe", "alta", 11.000, "plata");
+    const ev5 = new evillas ("percherón", "alta", 18.000, "oro");
+    const ev6 = new evillas ("mustang", "media", 9.800, "plata");
+    const ev7 = new evillas ("gallo", "alta", 24.000, "oro");
+    const ev8 = new evillas ("escorpión", "baja", 7.380, "plata");
+    console.log (`tu evilla contiene: ${evi.nombre}`)
+}
+evillas()
+function cinturones (){
+    function cintos(name, quality, price, material){
+        this.nombre =name;
+        this.calidad =quality;
+        this.precio = price;
+        this.mate = material;
+    }
+    const evi = new cintos ("caballos", "alta", 10.000, "plata");
+    const ev2 = new cintos ("gallo", "alta", 24.000, "oro");
+    const ev3 = new cintos ("escorpión", "alta", 7.380, "plata");
+    const ev4 = new cintos ("caballos", "media", 1.000, "piteado");
+    const ev5 = new cintos ("gallo", "media", 2.000, "piteado");
+    const ev6 = new cintos ("escorpión", "media", 1.380, "piteados");
+}
+cinturones()
