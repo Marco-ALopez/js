@@ -9,7 +9,7 @@ do{
         if (tipo === "personal"){
             let op = monto * (25/100);
             console.log ("sus mensualidades serían de: " + op + "$ pesos");
-            let plazos = parseInt(prompt(`favor de elejir los plazos "2, 4, 6, 8, 10 ,12, 24, 36, 48, 60" msi fijos`));
+            let plazos = parseInt(prompt(`favor de elejir los plazos "2, 4, 6, 8, 10 ,12, 24, 60" msi fijos`));
             let prepersonal = op * plazos;
             console.log("su interes total sería de: " +prepersonal.toFixed(2)+ "$ pesos");
         }else if (tipo === "auto"){
